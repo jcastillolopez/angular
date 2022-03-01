@@ -1,0 +1,18 @@
+<p>formularios works!</p>
+
+<div>
+
+    <label for="">Nombre</label>
+    <input type="text" (input)="cambiaNombre($event)">
+    <p>{{mensaje}}</p>
+</div>
+<div>
+    <label for="">Paises</label>
+    <select (change)="cambiaPais($event)">
+        <option value="es">España</option>
+        <option value="it">Italia</option>
+        <option value="fr">Francia</option>
+        <option value="de">Alemania</option>
+    </select>
+    <p>{{bandera}}</p>
+</div>

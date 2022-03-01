@@ -1,0 +1,36 @@
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+.container{
+    background-color: chocolate;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;  
+
+}
+button{
+    width: 30%;
+    height: 25px;
+    margin: 5px;
+}
+h3{
+    width: 90%;    
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;  
+}
+.numeros button:last-child{
+    width: 90%;
+   
+}
+.operaciones button{
+    width: 20%;
+}
+.operaciones button:last-child{
+    width: 90%;
+}

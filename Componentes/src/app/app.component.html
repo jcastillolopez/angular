@@ -1,0 +1,13 @@
+<div class="cards">
+    <app-card nombre="Mario Giron" direccion="gran via 23" email="mario@giron.com"
+        departamento="Informatica"></app-card>
+    <app-card nombre="Laura Gomez" direccion="Hortaleza 33" email="Laura@Gomez.com"
+        departamento="Marketing"></app-card>
+    <app-card [nombre]="empleados[0].nombre" [direccion]="empleados[0].direccion"
+        [email]="empleados[0].email" [departamento]="empleados[0].departamento"></app-card>
+</div>
+<app-suma [num1]="9" [num2]="6" (SumaRealizada)="onSumaRealizada ($event)" class="suma"></app-suma>
+<calculadora></calculadora>
+<cronometro [inicio]="4" (cuentaFinalizada)="onCuentaFinalizada($event)"></cronometro>
+<cronometro [inicio]="10"></cronometro>
+<cronometro [inicio]="6"></cronometro>

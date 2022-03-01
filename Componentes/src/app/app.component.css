@@ -1,0 +1,13 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.suma{
+    background-color: coral;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid blacks;
+}
