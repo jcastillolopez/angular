@@ -1,0 +1,12 @@
+<p>comanda works!</p>
+
+<h1>COMANDA</h1>
+<h2> Total: {{funcionTotal()}}€</h2>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between"
+        *ngFor="let productoComanda of  productosComanda; let indice = index ">
+        <button class="btn btn-danger btn-sm" (click)="borrar(indice)">X</button>
+        <span>{{productoComanda.nombre}}</span>
+        <span>{{productoComanda.precio + '€'}}</span>
+    </li>
+</ul>

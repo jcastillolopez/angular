@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <lista-productos titulo="comida" [productos]="arrComida"
+                (productoSelecionado)="productoEnviado($event)">
+            </lista-productos>
+            <lista-productos titulo="bebida" [productos]="arrBebida"
+                (productoSelecionado)="productoEnviado($event)"></lista-productos>
+        </div>
+        <div class="col-4">
+            <comanda [productosComanda]="productosSeleccionado"></comanda>
+        </div>
+
+    </div>
+
+</div>

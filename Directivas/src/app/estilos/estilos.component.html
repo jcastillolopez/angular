@@ -1,0 +1,27 @@
+<p>estilos works!</p>
+
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Tempore, totam.</p>
+
+<button (click)="cambiaColor()">Cambia Rojo</button>
+
+<!--
+desplegable con 4 colores (select)
+cuando CAMBIE el desplegable modificar la propiedad backgrounColor con el color seleccionado
+-->
+<select (change)="cambiaColorDesplegable($event)">
+    <option selected> Elige Color</option>
+    <option value="red"> Rojo</option>
+    <option value="green">Verde</option>
+    <option value="blue">Azul</option>
+    <option value="yellow">Amarillo</option>
+</select>
+<div>
+    <label for="">cambia los colores</label>
+    <input (input)="cambiarTexto($event)" type="text">
+</div>
+<input type="range" min="10" max="100" step="1" (input)="cambiaTamanoLetra ($event)">
+
+<!--
+    campo de tipo range cambiamos el texto del parrafo
+-->

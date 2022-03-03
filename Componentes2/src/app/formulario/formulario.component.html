@@ -1,0 +1,24 @@
+<p>formulario works!</p>
+
+
+<div>
+    <input type="text" [(ngModel)]="campoTexto">
+    <p>{{ campoTexto}}</p>
+    <button (click)="pulsaBoton()">Cambia el texto</button>
+</div>
+<div>
+    <div>
+        <label for="">Nombre</label>
+        <input type="text" [(ngModel)]="paciente.nombre">
+    </div>
+    <div>
+        <label for="">Apellidos</label>
+        <input type="text" [(ngModel)]="paciente.apellidos">
+    </div>
+    <div>
+        <label for="">Edad</label>
+        <input type="text" [(ngModel)]="paciente.edad">
+    </div>
+    <button (click)="enviarFormulario()">Guardar</button>
+</div>
+{{paciente | json}}
