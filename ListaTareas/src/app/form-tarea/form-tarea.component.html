@@ -1,0 +1,13 @@
+<p>form-tarea works!</p>
+<div>
+    <label class="form-label">Nueva tarea</label>
+    <input class="form-control" type="text" [(ngModel)]="nuevaTarea.titulo">
+    <label for="">Prioridad</label>
+    <select class="form-control" type="text">
+        <option value="Urgente">Urgente</option>
+        <option value="Mensual">Mensual</option>
+        <option value="Diaria">Diaria</option>
+    </select>
+    <button (click)="onClick()">Enviar</button>
+</div>
+{{nuevaTarea|json}}
