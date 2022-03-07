@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { Producto } from './interface/interface';
+import { Producto } from './interface/Producto';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +27,7 @@ export class AppComponent {
     const productosBorrados = this.arrProductosPendientes.splice($event, 1);
     this.arrProductosComprados.push(productosBorrados[0]);
   }
+
   onProductoSeleccionadoComprado($event: number) {
     const arrProductosBorrados = this.arrProductosComprados.splice($event, 1);
     this.arrProductosPendientes.push(arrProductosBorrados[0]);
