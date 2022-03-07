@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Tarea } from '../interfaces/tarea.interface';
 
 @Component({
-  selector: 'lista',
+  selector: 'listado-tareas',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
@@ -11,10 +11,15 @@ export class ListaComponent implements OnInit {
 
   constructor() {
 
-    this.lista = Tarea[];
+    this.lista = [];
   }
 
   ngOnInit(): void {
   }
-
+  onClick(ptarea: Tarea) {
+    ptarea.completa = !ptarea.completa;
+  }
+  onClickBorrar(indice: number) {
+    this.lista.splice(indice, 1);
+  }
 }

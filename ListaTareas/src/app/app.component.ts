@@ -16,4 +16,11 @@ export class AppComponent {
     this.arrTareas.push($event);
     console.log(this.arrTareas)
   }
+  onChange($event: any) {
+    this.arrTareas = this.arrTareas.filter((tarea) => {
+      return tarea.prioridad === $event.target.value;
+    });
+
+  }
 }
+

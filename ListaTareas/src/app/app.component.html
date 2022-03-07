@@ -1,2 +1,15 @@
-<form-tarea (crearTarea)="onCrearTarea($event)"></form-tarea>
-<lista></lista>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form-tarea (crearTarea)="onCrearTarea($event)"></form-tarea>
+        </div>
+        <div class="col-8">
+            <select class="form-select" (change)="onChange($event)">
+                <option value="Urgente">Urgente</option>
+                <option value="Mensual">Mensual</option>
+                <option value="Diaria">Diaria</option>
+            </select>
+            <listado-tareas [lista]="arrTareas"></listado-tareas>
+        </div>
+    </div>
+</div>

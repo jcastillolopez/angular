@@ -1,0 +1,9 @@
+<formulario (productoCreado)="onProductoCreado($event)"></formulario>
+
+
+<lista-productos titulo="Pendientes" [productos]="arrProductosPendientes"
+    (productoSeleccionado)="onProductoSeleccionado($event)"></lista-productos>
+
+
+<lista-productos titulo="Comprados" [productos]="arrProductosComprados"
+    (productoSeleccionado)="onProductoSeleccionadoComprado($event)"></lista-productos>

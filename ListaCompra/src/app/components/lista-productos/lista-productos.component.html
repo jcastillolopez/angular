@@ -1,0 +1,10 @@
+<p>lista-productos works!</p>
+
+<h4>{{titulo}} </h4>
+<div class="producto" *ngFor="let producto of productos; let indice = index;"
+    (click)="onClick(indice)">
+    <span>Nombre: {{producto.nombre}} </span>
+    <span>Cantidad:{{producto.cantidad}} </span>
+    <span>Departamento:{{producto.departamento}} </span>
+
+</div>

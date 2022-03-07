@@ -26,7 +26,9 @@ export class FormTareaComponent implements OnInit {
     this.nuevaTarea = {
       titulo: "", prioridad: "", completa: false
     };
+
   }
+
 }
 
 
