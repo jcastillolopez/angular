@@ -1,0 +1,13 @@
+<ul>
+  <li [routerLink]="['/home']" routerLinkActive="activo">HOME</li>
+  <li [routerLink]="['/info']" routerLinkActive="activo">INFORMACION</li>
+  <li [routerLink]="['/contacs']" routerLinkActive="activo">CONTACTOS</li>
+  <li [routerLink]="['/autores']" routerLinkActive="activo">AUTORES</li>
+</ul>
+<router-outlet></router-outlet>
+<div class="botones">
+  <button (click)="onClick('/home')">HOME</button>
+  <button (click)="onClick('/info')"> INFORMACION</button>
+  <button (click)="onClick('/contacs')">CONTACTOS</button>
+
+</div>

@@ -1,0 +1,13 @@
+<header>
+    <h1>BIENVENIDOS AL TRIVIAL</h1>
+    <div class="botones">
+        <button (click)="onClick('/home')">HOME</button>
+        <button (click)="onClick('/juego')">JUGAR</button>
+    </div>
+</header>
+<main>
+    <preguntas [enunciado]="arrPreguntas[preguntaActual].titulo"></preguntas>
+    <respuestas [respuestasActual]="arrPreguntas[preguntaActual].respuestas"
+        [respuestaCorrectaActual]="arrPreguntas[preguntaActual].respuestaCorrecta"
+        (respuestaSeleccionada)="onGestionRespuesta($event)"></respuestas>
+</main>
