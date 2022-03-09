@@ -8,6 +8,8 @@ import { HomeComponent } from './conponents/home/home.component';
 import { ContacsComponent } from './conponents/contacs/contacs.component';
 import { EmpleadosComponent } from './conponents/empleados/empleados.component';
 import { AutoresComponent } from './conponents/autores/autores.component';
+import { ProyectosComponent } from './conponents/proyectos/proyectos.component';
+import { RewiusComponent } from './conponents/rewius/rewius.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AutoresComponent } from './conponents/autores/autores.component';
     HomeComponent,
     ContacsComponent,
     EmpleadosComponent,
-    AutoresComponent
+    AutoresComponent,
+    ProyectosComponent,
+    RewiusComponent
   ],
   imports: [
     BrowserModule,

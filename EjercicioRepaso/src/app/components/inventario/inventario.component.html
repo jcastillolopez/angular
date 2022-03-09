@@ -1,0 +1,8 @@
+<section>
+    <div class="titulo">
+        <h2>SECCION FRUTERIA</h2>
+        <h3> El valor del stock es : {{valorStock}} €</h3>
+    </div>
+    <detalle-producto *ngFor="let prod of productos" [producto]="prod"
+        (productoActualizado)="onNuevoStockProducto($event)"></detalle-producto>
+</section>

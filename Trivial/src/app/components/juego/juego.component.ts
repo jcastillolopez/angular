@@ -30,8 +30,10 @@ export class JuegoComponent implements OnInit {
       this.contadorPuntos += this.arrPreguntas[this.preguntaActual].puntuacion;
     }
     if (this.preguntaActual === this.arrPreguntas.length - 1) {
+      alert(this.contadorPuntos)
       this.router.navigate(['/home'])
-    }
+    } localStorage.setItem('puntuacion_trivial', String(this.contadorPuntos));
+
     this.preguntaActual++
 
     console.log(this.contadorPuntos)

@@ -2,7 +2,8 @@
   <li [routerLink]="['/home']" routerLinkActive="activo">HOME</li>
   <li [routerLink]="['/info']" routerLinkActive="activo">INFORMACION</li>
   <li [routerLink]="['/contacs']" routerLinkActive="activo">CONTACTOS</li>
-  <li [routerLink]="['/autores']" routerLinkActive="activo">AUTORES</li>
+  <li [routerLink]="['autores/:autorId/libro/:libroId']" routerLinkActive="activo">AUTORES</li>
+  <li [routerLink]="['empleados/:empleadoId']" routerLinkActive="activo">EMPLEADOS</li>
 </ul>
 <router-outlet></router-outlet>
 <div class="botones">
