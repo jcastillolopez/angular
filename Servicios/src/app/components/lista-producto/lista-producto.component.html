@@ -1,0 +1,16 @@
+<p>lista-producto works!</p>
+<button (click)="onClick()">Productos Disponibles</button>
+<input type="range" min="0" max="7" (input)="onInput($event)">
+<select (change)="onChange($event)">
+    <option *ngFor="let pais of paises" [value]='pais'>{{pais|titlecase}}</option>
+
+</select>
+<div class="productos">
+    <div class="producto" *ngFor="let prod of arrProds">
+        <h3>{{prod.nombre}}</h3>
+        <img [src]="prod.imagen" alt="">
+        <p>Precio: {{prod.precio}}€</p>
+        <p>Stock: {{prod.stock}}</p>
+        <p>Pais de origen:{{prod.pais | titlecase}}</p>
+    </div>
+</div>

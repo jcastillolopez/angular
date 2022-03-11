@@ -1,0 +1,51 @@
+main{
+    background-color: rgb(225, 240, 235);
+}
+section{
+    width: 100%;   
+    background-color: rgb(153, 153, 140);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:space-between;
+    align-items: center;
+    text-align: center; 
+}
+select{
+  background-color: cornsilk;  
+  width: 50%;
+  height: 50px;
+  border-radius: 15px;
+  margin:20px ;
+  display: flex;
+  flex-wrap: wrap;  
+  font-size: 150%;  
+  }
+  .card{
+        color: white;
+        width: 20%;        
+        background-color: rgb(37, 54, 146);
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: left; 
+        margin: 10px;  
+        
+  }
+  h3{
+      font-size: 150%;
+  }
+  
+  hr{
+      width: 90%;
+      color: black;
+  }
+  p{
+      width: 100%;
+      font-size:125% ;
+  }
+  p :last-child{
+      margin-bottom: 10px;
+  }

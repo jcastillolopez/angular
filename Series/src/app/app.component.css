@@ -1,0 +1,11 @@
+main{
+    background-color: rgb(180, 180, 171);
+    display: flex;
+    flex-wrap: wrap;    
+    border-radius: 10px;  
+}
+.titulo{
+    width: 100%;
+    color: blue;
+    text-align: center;
+}

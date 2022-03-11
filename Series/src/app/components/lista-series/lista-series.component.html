@@ -1,0 +1,18 @@
+<main>
+    <select (change)="onChange($event)">
+        <option *ngFor="let titulo of listaSeries" [value]='titulo'>{{titulo}}</option>
+    </select>
+    <section>
+        <div class="card" *ngFor="let serie of series">
+            <p>Id: {{serie.id}}</p>
+            <h3>Titulo: {{serie.titulo}}</h3>
+            <hr>
+            <p>Creador: {{serie.creador}}</p>
+            <p>Rating: {{serie.rating}}</p>
+            <p>Fechas {{serie.fechas}}</p>
+            <p>Imagen: {{serie.imagen}}</p>
+            <p>Canal {{serie.canal}}</p>
+
+        </div>
+    </section>
+</main>
