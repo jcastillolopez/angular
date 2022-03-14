@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaSeriesComponent } from './components/lista-series/lista-series.component';
 import { HomeComponent } from './components/home/home.component';
+import { DetalleSeriesComponent } from './components/detalle-series/detalle-series.component';
+import { ListaPersonajesComponent } from './components/lista-personajes/lista-personajes.component';
 
 
 
@@ -14,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ListaSeriesComponent,
     HomeComponent,
+    DetalleSeriesComponent,
+    ListaPersonajesComponent,
 
   ],
   imports: [

@@ -9,17 +9,17 @@ import { serieInterface } from 'src/app/interfaces/serie.interface';
 })
 export class ListaSeriesComponent implements OnInit {
   series: serieInterface[];
-  listaSeries: string[];
+  listaCanales: string[];
 
   constructor(private seriesService: SeriesService) {
     this.series = [];
-    this.listaSeries = [];
+    this.listaCanales = [];
   }
   ngOnInit(): void {
     this.series = this.seriesService.getAll();
-    this.listaSeries = this.seriesService.getSeries();
+    this.listaCanales = this.seriesService.getCanales();
   }
   onChange($event: any) {
-    this.series = this.seriesService.getByserie($event.target.value);
+    this.series = this.seriesService.getBycanal($event.target.value);
   }
 }

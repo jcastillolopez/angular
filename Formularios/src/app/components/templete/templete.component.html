@@ -1,0 +1,26 @@
+<p>templete works!</p>
+
+{{varformulario.value | json }}
+
+<form #varformulario="ngForm" (ngSubmit)="onSubmit(varformulario.value)">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" name="nombre" id="" class="form-control" ngModel>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellidos</label>
+        <input type="text" name="apellidos" id="" class="form-control" ngModel>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Edad</label>
+        <input type="text" name="edad" id="" class="form-control" ngModel>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Dirección</label>
+        <input type="text" name="direccion" id="" class="form-control" ngModel>
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-info">
+</form>
+<p #parrafo>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum error suscipit amet
+    rerum perferendis hic.</p>
+<button (click)="onClick()">Pulsa</button>

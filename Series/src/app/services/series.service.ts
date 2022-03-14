@@ -3,6 +3,7 @@ import { serieInterface } from '../interfaces/serie.interface';
 import { SERIES } from '../db/series.db';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,12 +18,13 @@ export class SeriesService {
   getAll(): serieInterface[] {
     return this.series;
   }
-  getSeries(): string[] {
-    return [...new Set(this.series.map(serie => serie.titulo))];
+  getCanales(): string[] {
+    return [...new Set(this.series.map(serie => serie.canal))];
   }
-  getByserie(pSerie: string): serieInterface[] {
-    console.log(pSerie)
-    return this.series.filter(serie => serie.titulo === pSerie);
+  getBycanal(pCanal: string): serieInterface[] {
+    return this.series.filter(serie => serie.canal === pCanal);
+  }
+  getById(pSerieId: number): serieInterface {
+    return this.series.find(serie => serie.id === Number(pSerieId));
   }
 }
-
