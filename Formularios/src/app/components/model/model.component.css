@@ -1,6 +1,19 @@
-input.ng-valid.ng-touched{
-border: 2px solid green;
+
+
+.mb-3{
+    width: 500px; ;
 }
+
+
+
+input.ng-valid.ng-touched{
+    border: 5px solid lightgreen;
+}
+
 input.ng-invalid.ng-touched{
-    border: 2px solid red;
+    border: 5px solid tomato;
+}
+
+.error{
+    color: tomato;
 }

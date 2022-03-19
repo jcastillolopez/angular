@@ -1,33 +1,59 @@
-
- .titulo{
+.container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: lightblue;  
+    align-items: center;  
+    width: 100%; 
+   
+}
+.titulo{
+  width: 80%;
+  background-color: lightblue;
  }
  .post{
      display: flex;
-     flex-wrap: wrap; 
-     align-items: center; 
-     width: 30%;    
-     font-size: 125%;
-     background-color: rgb(30, 80, 173);
-     color: white;
+     flex-wrap: wrap;   
+     width: 100%; 
+     height: 70vh;   
+     font-size: 150%;
+     background-color: lightgrey;
+     color: blue;
      padding: 10px;
      border-radius: 10px;
-     margin: 10px 10px;
+     margin: 20px 20px; 
+     text-align: center;  
  }
- hr{
-     width: 95%;
-     color: white;
+
+ label{
+     color: black;
+     width: 30%; 
+     font-weight: bold; 
+     font-size: 125%;  
+ }
+ textarea{
+     width: 100%;
+     height:50% ; 
+     background-color: lightblue; 
+     margin: 5px;
+     font-size: 80%; 
+ }
+ .colocacion{
+   display: flex;
+   text-align: left;    
+   width: 100%;
+  
  }
  h3{
-    background-color: white;
-    color: black;
-    width: 70%;
-    margin: 0 25%;
+   
+    color: blue;  
     border-radius: 10px;
+    width: 60%;
  }
- span{
-     text-align: right;
+ p{
+    color: black;
+    width: 30%; 
+    font-weight: bold; 
+    font-size: 125%; 
  }
+
+ 

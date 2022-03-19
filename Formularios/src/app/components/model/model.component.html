@@ -1,38 +1,95 @@
-<p>model works!</p>
-
 <h2 class="my-4">Formulario Model</h2>
-<h4>Variables de formulario</h4>
-<p>¿es el formulario valido? {{formulario.valid}} </p>
+<div>
+    <h4>Variables de formulario</h4>
 
+    <p>¿Es el formulario válido? {{ formulario.valid }}</p>
+    <p>Formulario touched: {{ formulario.touched }}</p>
+    <p>Campo Nombre touched: {{ formulario.get('nombre').touched }}</p>
+    <p>Campo Email valid: {{ formulario.get('email').valid }}</p>
+    <p>Campo password Dirty: {{ formulario.get('password').dirty }} </p>
+    <p>Errores del nombre: {{ formulario.get('nombre').errors | json }}</p>
+    <p>Errores del DNI: {{ formulario.get('dni').errors | json }}</p>
+    <p>
+        ¿Hay error en el validador requerido del nombre?
+        {{ formulario.get('nombre').hasError('required') }}
+    </p>
+    <p>
+        ¿Hay error en el validador minLength del nombre?
+        {{ formulario.get('nombre').hasError('minlength') }}
+    </p>
+    <ul>
+        <li>Valid {{formulario.get('nombre').valid}}</li>
+        <li>Invalid {{formulario.get('nombre').invalid}}</li>
+        <li>Dirty {{formulario.get('nombre').dirty}}</li>
+        <li>Pristine {{formulario.get('nombre').pristine}}</li>
+        <li>Touched {{formulario.get('nombre').touched}}</li>
+        <li>Untouched {{formulario.get('nombre').untouched}}</li>
+    </ul>
+
+</div>
 <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <!-- Poner un mensajito para TODAS LAS VALIDACIONES QUE TENEMOS EN EL FORMULARIO -->
+
     <div class="mb-3">
         <label class="form-label">Nombre</label>
         <input type="text" class="form-control" formControlName="nombre">
+        <p class="error" *ngIf="checkError('nombre', 'required')">
+            El campo nombre es requerido
+        </p>
+        <p class="error" *ngIf="checkError('nombre', 'minlength')">
+            El campo nombre debe tener más de 3 caracteres
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Apellidos</label>
         <input type="text" class="form-control" formControlName="apellidos">
+        <p class="error" *ngIf="checkError('apellidos', 'required')">
+            El campo Apellidos es requerido
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Dirección</label>
         <input type="text" class="form-control" formControlName="direccion">
+        <p class="error" *ngIf="checkError('direccion', 'maxlength')">
+            El campo Direccion es demasiado largo
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Edad</label>
-        <input type="number" class="form-control" formControlName="edad">
+        <input type="text" class="form-control" formControlName="edad">
+        <p class="error" *ngIf="checkError('edad', 'edadvalidator')">
+            o eres menor o jubilado
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Email</label>
         <input type="text" class="form-control" formControlName="email">
+        <p class="error" *ngIf="checkError('email', 'pattern')">
+            El campo Email no es valido
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">DNI</label>
         <input type="text" class="form-control" formControlName="dni">
+        <p class="error" *ngIf="checkError('dni', 'errordni')">
+            El campo Dni no es valido
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Password</label>
         <input type="password" class="form-control" formControlName="password">
+        <p class="error" *ngIf="checkError('password', 'valid')">
+            El campo password no es valido
+        </p>
     </div>
+
     <div class="mb-3">
         <label class="form-label">Repite Password</label>
         <input type="password" class="form-control" formControlName="repite_password">

@@ -8,16 +8,22 @@ import { ARRdatosPost } from '../db/postDatos.db';
 export class PostsService {
   datosPostPrueba: postInterface[];
 
+
+  ngOnIninit() {
+
+  }
   constructor() {
-    this.datosPostPrueba = ARRdatosPost
+
   }
 
   getAll(): postInterface[] {
-    return this.datosPostPrueba;
+
+    return this.datosPostPrueba = JSON.parse(localStorage.getItem('blogs'));
+
   }
 
   getByPost(pTitle: string): postInterface  /* PostInterface | undefined*/ {
-    console.log(pTitle)
+
     return this.datosPostPrueba.find(post => post.title === pTitle)!
 
     /*let resultado = this.datosPostPrueba.find(post => post.title === pId)
@@ -34,5 +40,10 @@ export class PostsService {
       }
     }*/
   }
+  create(pPost: postInterface) {
+    this.datosPostPrueba.push(pPost);
+    console.log(this.datosPostPrueba);
+    localStorage.setItem('blogs', JSON.stringify(this.datosPostPrueba));
 
+  }
 }

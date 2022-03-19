@@ -5,13 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModelComponent } from './components/model/model.component';
-import { TempleteComponent } from './components/templete/templete.component';
+import { TemplateComponent } from './components/template/template.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ModelComponent,
-    TempleteComponent
+    TemplateComponent
+
   ],
   imports: [
     BrowserModule,

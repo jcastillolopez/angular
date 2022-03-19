@@ -1,0 +1,81 @@
+*{box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    border: 2px solid blue;  
+    text-align: center;
+    margin-left: 10%;
+    background-color: lightgray;
+
+}
+.titulo{
+    background-color: lightblue;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+h2{
+    width: 100%;
+    font-weight:500;
+}
+
+.descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+   padding: 20px;
+  
+
+}
+.input{
+    width: 40%;   
+}
+select{
+    background-color: white;
+}
+.blog{
+    width: 100%;
+    padding: 20px;  
+
+}
+label{
+    font-weight: bold;
+}
+
+
+:not(form).ng-valid.ng-touched{
+    border: 5px solid lightgreen;
+}
+
+:not(form).ng-invalid.ng-touched{
+    border: 5px solid tomato;
+}
+
+.error{
+    color: tomato;
+}
+.boton{
+    background-color: blue;
+    width: 40%;
+    margin: 20px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 125%;
+    color: white;
+}
+.boton:hover{
+    background-color: lightblue;
+}
+
+

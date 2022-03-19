@@ -1,1 +1,52 @@
-<h2> FORMULARIO works!</h2>
+<div class="corse">
+    <div class="container">
+        <div class="titulo">
+            <h2>INTRODUZCA EL NUEVO BLOG</h2>
+        </div>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="descripcion">
+                <div class="input">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" formControlName="title">
+                    <p class="error" *ngIf="checkError('title', 'required')">
+                        El campo titulo es requerido
+                    </p>
+                </div>
+
+                <div class="input">
+                    <label class="form-label">Category</label>
+                    <select class="form-control" formControlName="category">
+                        <option value="" disabled>Selecciona una categoria</option>
+                        <option value="discord">Discord</option>
+                        <option value="instagram">Instagrand</option>
+                        <option value="twiter">Twiter</option>
+                        <option value="Wassap">Wassap</option>
+                    </select>
+                    <p class="error" *ngIf="checkError('category', 'required')">
+                        El campo categoia es requerido
+                    </p>
+                </div>
+
+                <div class="input">
+                    <label class="form-label">Author</label>
+                    <input type="text" class="form-control" formControlName="author">
+                    <p class="error" *ngIf="checkError('author', 'required')">
+                        El campo autor es requerido
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog">
+                <label class="form-label">Body</label>
+                <textarea class="form-control" cols="30" rows="10"
+                    formControlName="body"></textarea>
+                <p class="error" *ngIf="checkError('body', 'required')">
+                    El campo post es requerido
+                </p>
+            </div>
+            <div class="">
+                <button class="boton" type="submit" [disabled]="!formulario.valid">GUARDAR</button>
+            </div>
+        </form>
+    </div>
+</div>

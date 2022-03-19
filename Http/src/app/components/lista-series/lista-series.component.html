@@ -1,0 +1,27 @@
+<p>lista-series works!</p>
+
+<p *ngFor="let serie of arrSeries">
+    {{serie | json}}
+</p>
+<main>
+    <ul>
+        <li *ngFor="let serie of arrSeries">{{serie.title}}</li>
+    </ul>
+
+    <section>
+        <div class="card" *ngFor="let serie of arrSeries">
+            <p>Id: {{serie.id}}</p>
+            <h3>Titulo: {{serie.title}}</h3>
+            <hr>
+            <div
+                [ngStyle]="{ background: 'url('+serie.image+')', width: '100%', height: '300px', backgroundSize: 'cover'}">
+            </div>
+            <p>Creador: {{serie.creator}}</p>
+            <p>Rating: {{serie.rating}}</p>
+            <p>Fechas {{serie.dates}}</p>
+            <p>{{serie.imagen}}</p>
+            <p>Canal {{serie.channel}}</p>
+
+        </div>
+    </section>
+</main>

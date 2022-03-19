@@ -3,23 +3,36 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   background-color: lightblue;  
+   background-color: lightblue;
+   width: 80%;  
 }
 .post{
     display: flex;
     flex-wrap: wrap; 
     align-items: center; 
-    width: 30%;    
+    width: 30%; 
+    height: 50vh;   
     font-size: 125%;
     background-color: rgb(30, 80, 173);
     color: white;
     padding: 10px;
     border-radius: 10px;
     margin: 10px 10px;
+    text-align: center;
 }
-hr{
+.post:hover{
+    background-color: lightblue;
+}
+textarea{
     width: 95%;
-    color: white;
+    height:50% ; 
+    background-color: rgb(167, 230, 252); 
+    margin: 5px; 
+}
+.creacion{
+   display: flex;
+   flex-wrap: wrap;
+  justify-content: space-around;
 }
 h3{
    background-color: white;
@@ -28,6 +41,7 @@ h3{
    margin: 0 25%;
    border-radius: 10px;
 }
-span{
-    text-align: right;
+p{
+    width: 40%;
+    padding: 30px;
 }

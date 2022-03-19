@@ -4,18 +4,18 @@ import { postInterface } from "../interfaces/Post.interface";
 
 export const ARRdatosPost: postInterface[] = [
     {
-        title: 'Discord',
+        title: 'Las Rosas',
         body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae provident consequatur nobis, perspiciatis corporis labore fugit aperiam sequi dolor corrupti!',
         author: 'Macario',
-        category: 'Full',
-        createdAt: new Date('2022/03/12'),
+        category: 'Discord',
+        createdAt: "12/3/2020"
     },
     {
-        title: 'whatsApp',
-        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam, tenetur natus fugit quae provident?',
+        title: ' Borracheria',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam, tenetur natus fugit quae provident?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae provident consequatur nobis, perspiciatis corporis labore fugit aperiam sequi dolor corrupti! ',
         author: 'juanRa',
-        category: 'small',
-        createdAt: new Date('2022/03/12'),
+        category: 'whatsApp',
+        createdAt: "12/3/2022",
     }
 ]
 

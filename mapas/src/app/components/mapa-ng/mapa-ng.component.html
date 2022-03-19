@@ -1,0 +1,22 @@
+<p>mapa-ng works!</p>
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="19" [fitBounds]="true">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <agm-marker *ngFor="let pais of arrPaises" [latitude]="pais.latlng[0] "
+        [longitude]="pais.latlng[1]" [agmFitBounds]="true"
+        [iconUrl]="$any({url:pais.flags.png , scaledSize:{width:30,height:30}})">
+        <agm-info-window>
+            <p>{{pais.translations.spa.common}}</p>
+        </agm-info-window>
+    </agm-marker>
+</agm-map>
+
+
+<!--
+    1.-  crear un servicio paises service
+    2.- generar metodo getEurope
+       ---realizar una peyicion get sobre la url 
+
+       incorporar en AppModule httpClientmodule
+    3.- desde el component MapNG llamamos al metodo geteurope del servicio, recuperamos tantos markers como paises
+-->

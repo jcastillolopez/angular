@@ -1,0 +1,15 @@
+
+img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+.card{
+    width: 400px;
+    height: 60vh;
+    color: rgb(197, 37, 37);
+    border-radius: 20px;
+  background-color: aqua;
+  margin: 10px;
+
+}
