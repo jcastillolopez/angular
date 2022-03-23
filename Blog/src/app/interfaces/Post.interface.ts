@@ -3,5 +3,5 @@ export interface postInterface {
     body: string,
     author: string,
     category: string,
-    createdAt: string,
+    createdAt: Date
 }

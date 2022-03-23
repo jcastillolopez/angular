@@ -22,14 +22,13 @@ export class DetallePostComponent implements OnInit {
       body: "",
       author: "",
       category: "",
-      createdAt: "",
+      createdAt: new Date(),
     }
   }
 
   ngOnInit(): void {
     this.activatedRouter.params.subscribe(params => {
       this.objetoPost! = this.postService.getByPost(params["tituloSeleccionado"]);
-
     })
   }
 

@@ -11,7 +11,7 @@
             <textarea>{{post.body}}</textarea>
             <div class="creacion">
                 <p>{{post.author}}</p>
-                <p>{{post.createdAt}}</p>
+                <p>{{post.createdAt | date :"shortDate"}}</p>
             </div>
         </div>
     </div>
